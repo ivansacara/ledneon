@@ -1,0 +1,76 @@
+@import 'variables';
+@import 'mixins';
+
+.footer {
+  &__inner {
+    position: relative;
+    padding: 40px 0;
+    @include media(sm) {
+      // padding-top: 40px;
+      // padding-bottom: 120px;
+      padding: 10px 0;
+    }
+  }
+  &__logo {
+    text-align: center;
+    @include media(lg) {
+      text-align: left;
+    }
+    // @include media(sm) {
+    //   text-align: center;
+    // }
+    @include media(sm) {
+      margin-left: -15px;
+    }
+  }
+  &__socials {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    display: flex;
+    transform: translateY(-50%);
+    // @include media(sm) {
+    //   bottom: 0px;
+    //   left: 50%;
+    //   top: auto;
+    //   right: auto;
+    //   transform: translate(-50%, -50%);
+    // }
+    @include media(sm) {
+      margin-right: -15px;
+    }
+  }
+  &__social {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background-color: $gray;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    &:first-child {
+      margin-right: 30px;
+      @include media(md) {
+        margin-right: 15px;
+      }
+    }
+    svg {
+      fill: $yellow;
+      transition: all 0.5s;
+    }
+    @include media(md) {
+      width: 40px;
+      height: 40px;
+      svg {
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+  &__social_fb:hover svg {
+    fill: #4a1fee;
+  }
+  &__social_insta:hover svg {
+    fill: #f77737;
+  }
+}

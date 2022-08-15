@@ -1,0 +1,24 @@
+@import 'variables';
+.lang {
+  font-weight: 700;
+  color: $white;
+  padding-bottom: 5px;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, -50%);
+    background-color: $yellow;
+    transition: all 0.3s;
+  }
+  &:hover {
+    color: $yellow;
+    &::before {
+      width: 100%;
+    }
+  }
+}

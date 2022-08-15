@@ -1,0 +1,82 @@
+{
+  "LocaleSwitcher": {
+    "switchLocale": "RU"
+  },
+  "Header": {
+    "works": "Lucrarile noastre",
+    "worksHref": "#our_works",
+    "about": "despre noi",
+    "aboutHref": "#our_works",
+    "reviews": "opinii",
+    "reviewsHref": "#our_works",
+    "contacts": "contacte",
+    "contactsHref": "#our_works",
+    "phone": "079123456",
+    "phoneHref": "tel:+37379123456"
+  },
+  "Hero": {
+    "title": "SEMNE NEON LA COMANDA",
+    "text": "Semne neon realizate manual din bandă LED.  O soluție originală care te va bucuras mereu!",
+    "btnText": "Feedback"
+  },
+  "Works": {
+    "title": "LUCRARILE NOASTRE",
+    "instaLink": "Mai multe exemple"
+  },
+  "About": {
+    "title": "Despre noi",
+    "text_1": "LEDNEON.MD este o companie de semne neon personalizate realizate manual.",
+    "text_2": "Producem atât panouri de interior, cât și de exterior din bandă LED de înaltă calitate.",
+    "text_3": "Putem plasa produsul pe o foaie de plexiglas de dimensiune la alegere.",
+    "text_4": "Led neon este cea mai recentă tehnologie, o nouă generație de iluminat convențional cu neon.  În producție, folosim neon flexibil modern.  Avantajele sale sunt că, spre deosebire de sticla clasică, consumă mai puțină energie, nu conține substanțe periculoase precum mercurul, nu funcționează la tensiune înaltă și este rezistentă la lovituri și căderi.",
+    "servicesListFirst": {
+      "itemFirst": "siguranța produsului",
+      "itemSecond": "durata de viață de până la 50.000 de ore",
+      "itemThird": "rezistență la impact"
+    },
+    "servicesListSecond": {
+      "itemFirst": "economie",
+      "itemSecond": "12 culori la alegere + RGB",
+      "itemThird": "1 an garanție"
+    },
+    "equipment": {
+      "stripTitle": "Bandă LED neon",
+      "stripText": "Neon LED flexibil cu protecție maximă și luminozitate sporită.  Produsul are o flexibilitate înaltă, poate fi folosit pentru a implementa orice idei de design.",
+      "stripImage": "/img_1.jpg",
+      "blockTitle": "Comutarea surselor de alimentare",
+      "blockText": "Un element indispensabil al sistemului de iluminare cu LED-uri, care este folosit ca sursă de curent stabilă și protejează LED-urile de supratensiuni.",
+      "blockImage": "/img_2.jpg",
+      "controlTitle": "Control pentru iluminare",
+      "controlText": "Dimmerele și controlerele sunt necesare pentru a controla culoarea și luminozitatea benzilor LED.  Dispozitivul vă permite să reglați ușor luminozitatea lămpii de la distanță.",
+      "controlImage": "/img_3.jpg"
+    }
+  },
+  "Reviews": {
+    "title": "Recenzii",
+    "subTitle": "Despre munca noastră",
+
+    "review": {
+      "src_1": "/ivan_l.jpeg",
+      "name_1": "Ivan Liulenev",
+      "text_1": "Muncă rapidă și de înaltă calitate, abordare flexibilă a clientului, înțelegere clară a dorințelor clientului.  Și în general băieți bravo, RECOMAND!",
+
+      "src_2": "/boris_b.jpeg",
+      "name_2": "Boris Brut",
+      "text_2": "Un prieten mi-a dăruit un număr neon pentru ușa din față, făcut de compania dată.  Lucrarea e excelentă, un produs de înaltă calitate.",
+
+      "src_3": "/andrei_o.jpeg",
+      "name_3": "Andrei Oleksyuk",
+      "text_3": "Băieții sunt foarte bravo, au făcut totul calitativ și la timp.  Recomand!"
+    }
+  },
+  "Contacts": {
+    "title": "Contacte",
+    "subtitle": "Trimite-ne un e-mail",
+    "subtitleText_1": "Suntem bucuroși să răspundem la orice întrebări legate de produsele noastre.",
+    "subtitleText_2": "Veți primi un răspuns în curând.",
+    "formName": "Nume",
+    "formPhone": "(+373) Nemar de telefon",
+    "formTextarea": "Mesaj",
+    "formBtn": "Transmite"
+  }
+}

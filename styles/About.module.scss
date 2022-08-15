@@ -1,0 +1,285 @@
+@import 'variables';
+@import 'mixins';
+@import 'font';
+@import 'animation';
+.ledneon {
+  margin-bottom: 300px;
+  @include media(md) {
+    margin-bottom: 120px;
+  }
+  &__text_container {
+    margin-bottom: 25px;
+  }
+  &__text_block {
+    margin-bottom: 30px;
+    p {
+      margin-bottom: 0;
+    }
+  }
+  &__text {
+    font-size: 21px;
+    font-weight: 500;
+  }
+  &__services {
+    margin-bottom: 75px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    @include media(md) {
+      justify-content: space-between;
+    }
+  }
+  &__services_list {
+    display: flex;
+    &:first-child {
+      margin-bottom: 15px;
+    }
+    @include media(md) {
+      flex-direction: column;
+      &:first-child {
+        margin-bottom: 5px;
+      }
+    }
+  }
+  &__services_list_item {
+    position: relative;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding-left: 20px;
+    margin-left: 15px;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 13px;
+      height: 13px;
+      background-color: $yellow;
+    }
+    @include media(md) {
+      margin-bottom: 5px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__equipments {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-right: -50px;
+    @include media(md) {
+      margin-right: 0;
+    }
+  }
+  &__equipment {
+    padding: 0 50px;
+    max-width: 33.333%;
+    flex: 0 0 33.333%;
+    @include media(lg) {
+      max-width: 50%;
+      flex: 0 0 50%;
+      margin-bottom: 100px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    @include media(md) {
+      max-width: 100%;
+      flex: 0 0 100%;
+      margin-bottom: 85px;
+    }
+    @include media(sm) {
+      padding-left: 50px;
+      padding-right: 0;
+    }
+  }
+  &__equipment_heading {
+    position: relative;
+  }
+  &__equipment_image {
+    width: 105px;
+    height: 105px;
+    overflow: hidden;
+    border-radius: 50%;
+    position: absolute;
+    top: -35px;
+    left: -50px;
+  }
+  &__equipment_image_borders {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: 10px solid $yellow-light;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 5;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      width: calc(100% - 10px);
+      height: calc(100% - 10px);
+      border-radius: 50%;
+      border: 5px solid $yellow;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 5;
+    }
+  }
+  &__equipment_title {
+    height: 40px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid $yellow-light;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 35px;
+    font-size: 15px;
+    line-height: 0.9;
+    text-transform: uppercase;
+    font-family: 'Bebas Neue Cyrillic', sans-serif;
+  }
+  &__equipment_text {
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 1.5;
+    font-family: 'Krub', sans-serif;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+  }
+  &__logo_text {
+    position: absolute;
+    span {
+      text-transform: uppercase;
+      font-weight: 700;
+      line-height: 0.9;
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        background-color: $white;
+      }
+    }
+  }
+  &__logo_text_left {
+    top: 0;
+    left: -120px;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+
+    span {
+      padding-top: 30px;
+      &::before {
+        right: 0;
+        top: 0;
+      }
+    }
+  }
+  &__logo_text_right {
+    top: 0;
+    right: -120px;
+    writing-mode: vertical-lr;
+    span {
+      padding-top: 30px;
+      &::before {
+        top: 0;
+        right: 0;
+      }
+    }
+  }
+  &__image {
+    position: absolute;
+    &::before {
+      content: '';
+      position: absolute;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+  &__image_plus {
+    top: -200px;
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    &::before {
+      width: 100%;
+      height: 100%;
+      background-image: url('../public/plus.png');
+      -webkit-animation: rotating 10s linear infinite;
+      -moz-animation: rotating 10s linear infinite;
+      -ms-animation: rotating 10s linear infinite;
+      -o-animation: rotating 10s linear infinite;
+      animation: rotating 10s linear infinite;
+    }
+    @include media(xl) {
+      right: 0;
+      left: auto;
+    }
+    @include media(md) {
+      top: -105px;
+      width: 95px;
+      height: 95px;
+    }
+  }
+  &__image_triangle {
+    right: -300px;
+    bottom: -30px;
+    width: 600px;
+    height: 600px;
+    &::before {
+      width: 100%;
+      height: 100%;
+      background-image: url('../public/triangle.png');
+      -webkit-animation: fadein 2s 1s ease-in alternate infinite;
+      -moz-animation: fadein 2s 1s ease-in alternate infinite;
+      animation: fadein 2s 1s ease-in alternate infinite;
+    }
+    @include media(md) {
+      bottom: 150px;
+      right: -290px;
+    }
+    @include media(xs) {
+      width: 500px;
+      height: 500px;
+      bottom: 240px;
+      right: -240px;
+    }
+  }
+  &__image_flash {
+    left: -255px;
+    bottom: -400px;
+    width: 600px;
+    height: 600px;
+    &::before {
+      width: 100%;
+      height: 100%;
+      background-image: url('../public/flash.png');
+      -webkit-animation: fadein 4s 1s ease-in alternate infinite;
+      -moz-animation: fadein 4s 1s ease-in alternate infinite;
+      animation: fadein 4s 1s ease-in alternate infinite;
+    }
+    @include media(md) {
+      width: 250px;
+      height: 250px;
+      left: -115px;
+      bottom: 77px;
+    }
+    @include media(xs) {
+      bottom: 105px;
+    }
+  }
+}

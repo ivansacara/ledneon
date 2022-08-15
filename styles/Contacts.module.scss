@@ -1,0 +1,70 @@
+@import 'variables';
+@import 'mixins';
+.ledneon {
+  margin-bottom: 190px;
+  @include media(md) {
+    margin-bottom: 100px;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    max-width: 515px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  &__input,
+  &__textarea {
+    background-color: transparent;
+    border: 3px solid $white;
+    border-radius: 25px;
+    padding: 0 35px;
+    font-size: 16px;
+    font-weight: 600;
+    color: $white;
+    &::placeholder {
+      font-size: 14px;
+      font-weight: 600;
+      color: $gray-light;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+  }
+  &__input {
+    height: 65px;
+    margin-bottom: 15px;
+  }
+  &__textarea {
+    height: 180px;
+    resize: none;
+    margin-bottom: 20px;
+    padding: 25px 35px;
+    &::placeholder {
+      font-size: 16px;
+    }
+  }
+  &__btn {
+    width: 170px;
+    height: 65px;
+    border: 1px solid $white;
+    border-radius: 5px;
+    background-color: transparent;
+    margin: 0 auto;
+    font-size: 14px;
+    font-weight: 600;
+    color: $white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+  }
+  &__input,
+  &__textarea,
+  &__btn {
+    transition: all 0.5s;
+    &:hover,
+    &:focus {
+      border-color: $yellow;
+      outline: none;
+      box-shadow: 0px 0px 30px 0px rgb(241 225 0 / 30%);
+    }
+  }
+}
