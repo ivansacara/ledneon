@@ -10,17 +10,18 @@ import { Reviews } from '../components/Reviews';
 import { Works } from '../components/Woks';
 
 export async function getStaticProps({ locale }: GetStaticPropsContext) {
-  // const url = `https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,permalink&access_token=${process.env.INSTAGRAM_KEY}`;
-  // const data = await fetch(url);
-  // const feed = await data.json();
-
   return {
     props: {
       lang: (await import(`../translations/${locale}.json`)).default,
-      // feed,
     },
   };
 }
+
+export const getInstagramPhotos = () => {
+  const token = process.env.NEXT_PUBLIC_INSTAGRAM_KEY;
+  const url = `https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,permalink&access_token=${token}`;
+  return fetch(url);
+};
 
 export default function Home() {
   return (

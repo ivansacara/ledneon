@@ -2,25 +2,25 @@ import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import { getInstagramPhotos } from '../pages';
 import styles from '../styles/Works.module.scss';
 
 export const Works = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    const url = `https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,permalink,media_type&access_token=IGQVJWMDhScU1ZAUFQ2bHRPMUpESVpLdmxUYXRxNUwtbkw3OVQ4T0NpbWdzRDdhWXdtdHU0aXhmcmM0b3NWbnpTelVUMkt3eElJWk5QcjdTV3NNMmp0dTBSYi1KbEw4ZA25XNEZA3T1FYTnVGRWVNeE5KUQZDZD`;
-    fetch(url)
+    getInstagramPhotos()
       .then((res) => res.json())
       .then((res) => {
         setData(res.data);
       });
   }, []);
 
-  console.log();
-
   const instaContent = data;
 
-  const images = instaContent.filter((item: any) => item === 'IMAGE');
+  const images = instaContent.filter((item: any) =>
+    item ? item.media_url.includes('scontent.cdninstagram.com') : null
+  );
 
   const getRandomOne = (imagesArray: any[]) => {
     return imagesArray[Math.floor(Math.random() * imagesArray.length)];
