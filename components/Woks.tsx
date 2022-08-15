@@ -17,7 +17,7 @@ export const Works = () => {
   }, []);
 
   const instaContent = data;
-  const zero = 0;
+  
   const images = instaContent.filter((item: any) =>
     item ? item.media_url.includes('scontent.cdninstagram.com') : null
   );
