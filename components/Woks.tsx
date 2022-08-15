@@ -8,7 +8,7 @@ export const Works = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    const url = `https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,permalink&access_token=IGQVJWMDhScU1ZAUFQ2bHRPMUpESVpLdmxUYXRxNUwtbkw3OVQ4T0NpbWdzRDdhWXdtdHU0aXhmcmM0b3NWbnpTelVUMkt3eElJWk5QcjdTV3NNMmp0dTBSYi1KbEw4ZA25XNEZA3T1FYTnVGRWVNeE5KUQZDZD`;
+    const url = `https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,permalink,media_type&access_token=IGQVJWMDhScU1ZAUFQ2bHRPMUpESVpLdmxUYXRxNUwtbkw3OVQ4T0NpbWdzRDdhWXdtdHU0aXhmcmM0b3NWbnpTelVUMkt3eElJWk5QcjdTV3NNMmp0dTBSYi1KbEw4ZA25XNEZA3T1FYTnVGRWVNeE5KUQZDZD`;
     fetch(url)
       .then((res) => res.json())
       .then((res) => {
@@ -16,11 +16,11 @@ export const Works = () => {
       });
   }, []);
 
+  console.log();
+
   const instaContent = data;
 
-  const images = instaContent.filter((item: any) =>
-    item ? item.media_url.includes('scontent.cdninstagram.com') : null
-  );
+  const images = instaContent.filter((item: any) => item === 'IMAGE');
 
   const getRandomOne = (imagesArray: any[]) => {
     return imagesArray[Math.floor(Math.random() * imagesArray.length)];
@@ -48,7 +48,6 @@ export const Works = () => {
     return newImagesArray;
   };
   const imagesLength = makeRandomArray();
-  console.log(imagesLength);
 
   const t = useTranslations('Works');
 
