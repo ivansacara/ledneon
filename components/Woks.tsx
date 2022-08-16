@@ -17,7 +17,7 @@ export const Works = () => {
   }, []);
 
   const instaContent = data;
-  
+
   const images = instaContent.filter((item: any) =>
     item ? item.media_url.includes('scontent.cdninstagram.com') : null
   );
@@ -61,7 +61,6 @@ export const Works = () => {
           </h2>
         </div>
         <div className='ledneon__component_wrapper'>
-          <div className={styles.ledneon__photos}></div>
           <div className={styles.ledneon__photos}>
             {imagesLength.map((image: any) => {
               return (

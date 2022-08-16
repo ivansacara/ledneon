@@ -5,7 +5,7 @@ import { NextIntlProvider } from 'next-intl';
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <NextIntlProvider messages={pageProps.lang}>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </NextIntlProvider>
   );
 }
