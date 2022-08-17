@@ -34,6 +34,9 @@
       animation: rotating 10s linear infinite;
     }
   }
+  @include media(md) {
+    height: 270px;
+  }
   @include media(sm) {
     &::before {
       left: -92px;
