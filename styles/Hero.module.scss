@@ -153,6 +153,8 @@
     line-height: 1.2;
     color: $black;
     transition: all 0.5s;
+    position: relative;
+    z-index: 5;
     &:hover,
     &:focus {
       background-color: $white;
