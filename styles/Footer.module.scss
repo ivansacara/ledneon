@@ -3,41 +3,30 @@
 
 .footer {
   &__inner {
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 40px 0;
     @include media(sm) {
-      // padding-top: 40px;
-      // padding-bottom: 120px;
       padding: 10px 0;
+      flex-direction: column;
     }
   }
   &__logo {
     text-align: center;
-    @include media(lg) {
-      text-align: left;
-    }
-    // @include media(sm) {
-    //   text-align: center;
-    // }
     @include media(sm) {
-      margin-left: -15px;
+      margin-bottom: 10px;
     }
   }
   &__socials {
-    position: absolute;
-    right: 0;
-    top: 50%;
     display: flex;
-    transform: translateY(-50%);
-    // @include media(sm) {
-    //   bottom: 0px;
-    //   left: 50%;
-    //   top: auto;
-    //   right: auto;
-    //   transform: translate(-50%, -50%);
-    // }
+    align-items: center;
+    margin-right: -15px;
+    @include media(md) {
+      margin-right: -10px;
+    }
     @include media(sm) {
-      margin-right: -15px;
+      margin-right: 0;
     }
   }
   &__social {
@@ -48,11 +37,9 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    &:first-child {
-      margin-right: 30px;
-      @include media(md) {
-        margin-right: 15px;
-      }
+    margin: 0 15px;
+    @include media(md) {
+      margin: 0 10px;
     }
     svg {
       fill: $yellow;
@@ -67,10 +54,16 @@
       }
     }
   }
+  &__social_etsy svg {
+    width: 35px;
+  }
   &__social_fb:hover svg {
     fill: #4a1fee;
   }
   &__social_insta:hover svg {
-    fill: #f77737;
+    fill: #c83462;
+  }
+  &__social_etsy:hover svg {
+    fill: #f45800;
   }
 }
