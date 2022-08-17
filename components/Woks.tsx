@@ -17,9 +17,10 @@ export const Works = () => {
   }, []);
 
   const instaContent = data;
+  // console.log(instaContent);
 
   const images = instaContent.filter((item: any) =>
-    item ? item.media_url.includes('scontent.cdninstagram.com') : null
+    item ? item.media_type.includes('IMAGE') : null
   );
 
   const getRandomOne = (imagesArray: any[]) => {
@@ -49,6 +50,8 @@ export const Works = () => {
   };
   const imagesLength = makeRandomArray();
 
+  console.log(imagesLength);
+
   const t = useTranslations('Works');
 
   return (
@@ -67,13 +70,10 @@ export const Works = () => {
                 <div key={image.id} className={styles.ledneon__photo}>
                   <Link href={image.permalink}>
                     <a className={styles.ledneon__photo_link} target='_blank'>
-                      <Image
-                        className={styles.ledneon__img}
-                        width={500}
-                        height={500}
-                        objectFit='cover'
+                      <img
+                        className={styles.ledneon__photo_img}
                         src={image.media_url}
-                        alt={image.caption}
+                        alt='ledneonImage'
                       />
                     </a>
                   </Link>

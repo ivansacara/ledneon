@@ -19,7 +19,7 @@ export async function getStaticProps({ locale }: GetStaticPropsContext) {
 
 export const getInstagramPhotos = () => {
   const token = process.env.NEXT_PUBLIC_INSTAGRAM_KEY;
-  const url = `https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,permalink&access_token=${token}`;
+  const url = `https://graph.instagram.com/me/media?fields=id,media_url,media_type,permalink&access_token=${token}`;
   return fetch(url);
 };
 
