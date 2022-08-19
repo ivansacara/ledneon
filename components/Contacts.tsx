@@ -28,8 +28,6 @@ export const Contacts = () => {
     const api = new XMLHttpRequest();
     api.open('GET', url, true);
     api.send();
-    console.log(message);
-
     setForm({ name: '', phone: '', text: '' });
   };
 

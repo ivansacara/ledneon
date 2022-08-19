@@ -7,7 +7,6 @@ import { Header } from '../components/Header';
 import { Hero } from '../components/Hero';
 import { Reviews } from '../components/Reviews';
 import { Works } from '../components/Woks';
-import Offer from './offer';
 
 export async function getStaticProps({ locale }: GetStaticPropsContext) {
   return {
@@ -38,7 +37,6 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' sizes='32x32' />
         <link rel='apple-touch-icon' href='/favicon.ico' />
       </Head>
-      <Offer />
       <div className='wrapper'>
         <Header />
         <main>

@@ -17,7 +17,6 @@ export const Works = () => {
   }, []);
 
   const instaContent = data;
-  // console.log(instaContent);
 
   const images = instaContent.filter((item: any) =>
     item ? item.media_type.includes('IMAGE') : null
@@ -49,8 +48,6 @@ export const Works = () => {
     return newImagesArray;
   };
   const imagesLength = makeRandomArray();
-
-  console.log(imagesLength);
 
   const t = useTranslations('Works');
 
