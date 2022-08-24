@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Script from 'next/script';
 import styles from '../styles/Offer.module.scss';
 
 export default function Offer() {
@@ -19,6 +20,18 @@ export default function Offer() {
         <link rel='icon' href='/favicon.ico' sizes='32x32' />
         <link rel='apple-touch-icon' href='/favicon.ico' />
       </Head>
+      <Script
+        src='https://www.googletagmanager.com/gtag/js?id=G-3WDH6X8KC9'
+        async
+      />
+      <Script id='google-analytics'>
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-3WDH6X8KC9');
+        `}
+      </Script>
       <div className={styles.offer__images}>
         <img
           className={`${styles.offer__image_desktop} ${styles.offer__image}`}
