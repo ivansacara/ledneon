@@ -16,6 +16,10 @@
   }
   &__logo {
     text-align: center;
+    padding-right: 42px;
+    @include media(md) {
+      padding-right: 0;
+    }
   }
   &__mailto_link {
     color: $yellow;
