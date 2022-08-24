@@ -1,9 +1,9 @@
 @import 'variables';
 @import 'mixins';
 .ledneon {
-  margin-bottom: 190px;
+  margin-bottom: 220px;
   @include media(md) {
-    margin-bottom: 100px;
+    margin-bottom: 170px;
   }
   &__form {
     display: flex;

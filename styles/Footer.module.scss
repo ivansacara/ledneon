@@ -6,16 +6,24 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 40px 0;
+    padding-bottom: 40px;
+    @include media(md) {
+      padding-bottom: 20px;
+    }
     @include media(sm) {
-      padding: 10px 0;
       flex-direction: column;
     }
   }
   &__logo {
     text-align: center;
-    @include media(sm) {
-      margin-bottom: 10px;
+  }
+  &__mailto_link {
+    color: $yellow;
+    display: inline-block;
+    margin: 10px 0;
+    &:hover,
+    &:focus {
+      color: $white;
     }
   }
   &__socials {

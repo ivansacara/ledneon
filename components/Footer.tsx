@@ -10,6 +10,13 @@ export const Footer = () => {
           <div className={styles.footer__logo}>
             <Image src={'/logo.png'} width={230} height={40} alt='logo' />
           </div>
+          <div className={styles.footer__mailto}>
+            <Link href={'mailto:info@ledneon.md'}>
+              <a className={styles.footer__mailto_link} target={'_blank'}>
+                info@ledneon.md
+              </a>
+            </Link>
+          </div>
           <div className={styles.footer__socials}>
             <Link href={'https://www.facebook.com/ledneon.md'}>
               <a
