@@ -23,7 +23,7 @@
     color: $white;
     font-family: 'Myriad Pro', sans-serif;
     &::placeholder {
-      font-size: 14px;
+      font-size: 15px !important;
       font-weight: 600;
       color: $gray-light;
       text-transform: uppercase;
