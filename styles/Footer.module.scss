@@ -25,6 +25,7 @@
     color: $yellow;
     display: inline-block;
     margin: 10px 0;
+    transition: all 0.8s;
     &:hover,
     &:focus {
       color: $white;
