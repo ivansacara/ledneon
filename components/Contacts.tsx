@@ -2,21 +2,27 @@ import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 import styles from '../styles/Contacts.module.scss';
 
-interface CustomEvent {
-  target: {
-    value: any;
-  };
-}
+// interface CustomEvent {
+//   target: {
+//     value: any;
+//   };
+// }
 
 export const Contacts = () => {
   const [form, setForm] = useState({ name: '', phone: '', text: '' });
 
-  const handleChangeForm = (formKey: string) => (e: CustomEvent) => {
-    setForm({
-      ...form,
-      [formKey]: e.target.value,
-    });
-  };
+  const handleChangeForm =
+    (formKey: string) =>
+    (
+      e:
+        | React.ChangeEvent<HTMLInputElement>
+        | React.ChangeEvent<HTMLTextAreaElement>
+    ) => {
+      setForm({
+        ...form,
+        [formKey]: e.target.value,
+      });
+    };
 
   const sendMesage = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();

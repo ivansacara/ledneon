@@ -1,9 +1,15 @@
 import { useTranslations } from 'next-intl';
-import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { getInstagramPhotos } from '../pages';
 import styles from '../styles/Works.module.scss';
+
+interface ImageItem {
+  id: string;
+  media_type: string;
+  media_url: string;
+  permalink: string;
+}
 
 export const Works = () => {
   const [data, setData] = useState([]);
@@ -18,15 +24,15 @@ export const Works = () => {
 
   const instaContent = data;
 
-  const images = instaContent.filter((item: any) =>
+  const images = instaContent.filter((item: ImageItem) =>
     item ? item.media_type.includes('IMAGE') : null
   );
 
-  const getRandomOne = (imagesArray: any[]) => {
+  const getRandomOne = (imagesArray: ImageItem[]) => {
     return imagesArray[Math.floor(Math.random() * imagesArray.length)];
   };
 
-  function removeItemOnce(arr: any[], value: any) {
+  function removeItemOnce(arr: ImageItem[], value: ImageItem) {
     let index = arr.indexOf(value);
     if (index > -1) {
       arr.splice(index, 1);
@@ -34,8 +40,8 @@ export const Works = () => {
     return arr;
   }
   const makeRandomArray = () => {
-    const newImagesArray: any[] = [];
-    let imagesLeft: any[] = images;
+    const newImagesArray: ImageItem[] = [];
+    let imagesLeft: ImageItem[] = images;
 
     for (let i = 0; i < 9; i++) {
       const image = getRandomOne(imagesLeft);
