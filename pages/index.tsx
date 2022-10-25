@@ -54,7 +54,7 @@ export default function Home() {
         <Header />
         <main>
           <Hero />
-          {/* <Works /> */}
+          <Works />
           <About />
           <Reviews />
           <Contacts />
