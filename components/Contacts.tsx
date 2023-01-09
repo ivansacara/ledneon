@@ -2,12 +2,6 @@ import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 import styles from '../styles/Contacts.module.scss';
 
-// interface CustomEvent {
-//   target: {
-//     value: any;
-//   };
-// }
-
 export const Contacts = () => {
   const [form, setForm] = useState({ name: '', phone: '', text: '' });
 
