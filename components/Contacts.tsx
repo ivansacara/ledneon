@@ -47,6 +47,7 @@ export const Contacts = () => {
         <div className='ledneon__component_wrapper'>
           <form className={styles.ledneon__form} onSubmit={sendMesage}>
             <input
+              required={true}
               className={styles.ledneon__input}
               type='text'
               placeholder={t('formName')}
@@ -54,6 +55,7 @@ export const Contacts = () => {
               value={form.name}
             />
             <input
+              required={true}
               className={styles.ledneon__input}
               type='text'
               onChange={handleChangeForm('phone')}
